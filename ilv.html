@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Valentine Game</title>
+<style>
+    body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+        font-family: 'Segoe UI', sans-serif;
+        overflow: hidden;
+    }
+    .box {
+        background: white;
+        padding: 30px;
+        border-radius: 20px;
+        text-align: center;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
+    h1 {
+        color: #e63946;
+    }
+    button {
+        padding: 12px 25px;
+        font-size: 18px;
+        border: none;
+        border-radius: 30px;
+        cursor: pointer;
+        margin: 15px;
+    }
+    #yes {
+        background: #e63946;
+        color: white;
+    }
+    #no {
+        background: #ccc;
+        color: black;
+        position: absolute;
+    }
+</style>
+</head>
+<body>
+
+<div class="box">
+    <h1>💖 Will you be my Valentine? 💖</h1>
+    <button id="yes" onclick="openProposal()">Yes ❤️</button>
+</div>
+
+<button id="no">No 💔</button>
+
+<script>
+    const noBtn = document.getElementById("no");
+
+    noBtn.addEventListener("mouseover", () => {
+        const x = Math.random() * (window.innerWidth - 100);
+        const y = Math.random() * (window.innerHeight - 50);
+        noBtn.style.left = x + "px";
+        noBtn.style.top = y + "px";
+    });
+
+    function openProposal() {
+        window.open("proposal.html", "_blank");
+    }
+</script>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>My Proposal ❤️</title>
+<style>
+    body {
+        background: linear-gradient(135deg, #fbc2eb, #a6c1ee);
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Segoe UI', sans-serif;
+    }
+    .letter {
+        background: white;
+        padding: 40px;
+        border-radius: 20px;
+        max-width: 500px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        text-align: center;
+    }
+    h2 {
+        color: #e63946;
+    }
+    p {
+        font-size: 18px;
+        line-height: 1.6;
+    }
+</style>
+</head>
+<body>
+
+<div class="letter">
+    <h2>💖 My Valentine Proposal 💖</h2>
+    <p>
+        From the moment you came into my life, everything felt brighter and warmer.  
+        Your smile makes my bad days better, and your presence makes every moment special.
+    </p>
+    <p>
+        I don’t need a special day to love you,  
+        but today I just want to ask —
+    </p>
+    <p><strong>Will you be mine, today and always? 💕</strong></p>
+    <p>Happy Valentine’s Day ❤️</p>
+</div>
+
+</body>
+</html>
